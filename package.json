@@ -15,13 +15,15 @@
     "react-scripts": "1.1.4"
   },
   "dependencies": {
+    "axios": "0.18.0",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.2.0",
+    "moment": "^2.22.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "axios": "0.18.0",
+    "react-moment": "^0.7.0",
     "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "glamor": "^2.20.40",
-    "glamorous": "^4.2.0"
+    "react-router-dom": "^4.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

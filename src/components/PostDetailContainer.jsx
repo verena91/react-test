@@ -1,6 +1,7 @@
 import React from 'react';
+import Moment from 'react-moment';
 import { Div, Img } from 'glamorous';
-import { PostGridDetail, PostBox, PostHeaderFooter, PostTitle, PostAuthor, Tag } from './PostStyle';
+import { PostGridDetail, PostBox, PostHeaderFooter, PostTitle, PostAuthor, Tag, PostDate } from './PostStyle';
 
 const PostDetailContainer = (props) => {
   const locationState = props.history.location.state;
@@ -21,7 +22,11 @@ const PostDetailContainer = (props) => {
     >
       <PostGridDetail>
         <PostHeaderFooter css={{ gridArea: 'header' }}>
-          <PostTitle>{locationState.post.title}<PostAuthor><br /> By: {locationState.post.authors}</PostAuthor></PostTitle>
+          <PostTitle>
+            {locationState.post.title}
+            <PostAuthor><br /> By: {locationState.post.authors}</PostAuthor><br />
+            <PostDate>Date: <Moment format="YYYY/MM/DD HH:mm">{locationState.post.date}</Moment></PostDate>
+          </PostTitle>
           {locationState.post.tags.map(t => <Tag key={t.id}>{t.name} </Tag>)}
         </PostHeaderFooter>
         <PostBox css={{ gridArea: 'sidebar' }}>

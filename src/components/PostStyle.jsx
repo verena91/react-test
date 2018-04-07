@@ -45,12 +45,17 @@ const PostHeaderFooter = glamorous(PostBox)({
 });
 
 const PostTitle = glamorous.h2({
-  color: '#4d79ff',
+  color: '#400080',
 });
 
 const PostAuthor = glamorous.span({
   color: '#000',
   fontSize: '14px',
+});
+
+const PostDate = glamorous.span({
+  color: '#000',
+  fontSize: '12px',
 });
 
 const Tag = glamorous.div({
@@ -66,4 +71,7 @@ const Tag = glamorous.div({
   padding: '3px',
 });
 
-export { PostGrid, PostGridDetail, PostBox, PostHeaderFooter, PostTitle, PostAuthor, Tag };
+export {
+  PostGrid, PostGridDetail, PostBox, PostHeaderFooter, PostTitle, PostAuthor,
+  Tag, PostDate,
+};
